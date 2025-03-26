@@ -22,7 +22,7 @@ const BlogList: React.FC<BlogListProps> = ({ blogs }) => {
     switch (value) {
       case 1:
         setCurrentPage(1);
-        setCurrentStart(0);
+        setCurrentStart(1);
         setCurrentEnd(10);
         break;
       case 2:
