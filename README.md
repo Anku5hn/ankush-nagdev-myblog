@@ -38,3 +38,16 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+
+## MUI Packages
+npm i @emotion/cache @emotion/styled @mui/material @mui/material-nextjs @emotion/server @mui/icons-material
+
+## How To Run This Project Locally
+- install node modules in the main directory (open with terminal and run command: npm install)
+- Run command: npm run dev
+
+## Tech Stack
+- NextJS
+- TypeScript
+- MaterialUI
+- TailwindCSS
