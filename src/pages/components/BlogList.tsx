@@ -15,82 +15,17 @@ interface BlogListProps {
 //map blog list
 const BlogList: React.FC<BlogListProps> = ({ blogs }) => {
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const [currentStart, setCurrentStart] = useState<number>(0);
-  const [currentEnd, setCurrentEnd] = useState<number>(10);
-  //switch case for page indentation
-  const handlePage = (value: number) => {
-    switch (value) {
-      case 1:
-        setCurrentPage(0);
-        setCurrentStart(1);
-        setCurrentEnd(10);
-        break;
-      case 2:
-        setCurrentPage(2);
-        setCurrentStart(11);
-        setCurrentEnd(20);
-        break;
-      case 3:
-        setCurrentPage(3);
-        setCurrentStart(21);
-        setCurrentEnd(30);
-        break;
-      case 4:
-        setCurrentPage(4);
-        setCurrentStart(31);
-        setCurrentEnd(40);
-        break;
-      case 5:
-        setCurrentPage(5);
-        setCurrentStart(41);
-        setCurrentEnd(50);
-        break;
-      case 6:
-        setCurrentPage(6);
-        setCurrentStart(51);
-        setCurrentEnd(60);
-        break;
-      case 7:
-        setCurrentPage(7);
-        setCurrentStart(61);
-        setCurrentEnd(70);
-        break;
-      case 8:
-        setCurrentPage(8);
-        setCurrentStart(71);
-        setCurrentEnd(80);
-        break;
-      case 9:
-        setCurrentPage(9);
-        setCurrentStart(81);
-        setCurrentEnd(90);
-        break;
-      case 10:
-        setCurrentPage(10);
-        setCurrentStart(91);
-        setCurrentEnd(100);
-        break;
-      default:
-        setCurrentPage(1);
-        setCurrentStart(0);
-        setCurrentEnd(10);
-        break;
-
-    }
+  const startIndex = (currentPage - 1) * 10;
+  const endIndex = (startIndex) + 10;
+  const posts = blogs.slice(startIndex, endIndex);
+  const handlePage = (value: number) =>{
+    setCurrentPage(value);
   }
   return (
     <>
-    {
-      currentStart == 0 && currentEnd == 10 && <>
-      {blogs.slice(0, 10).map((blog) => (
-        <>
-          <BlogContainer id={blog.id} title={blog.title} body={blog.body} userId={blog.userId} />
-        </>
-      ))}
-      </>
-    }
-      { currentStart && currentEnd && <>
-      {blogs.slice(currentStart, currentEnd).map((blog) => (
+
+      { posts && <>
+      {posts.map((blog) => (
         <>
           <BlogContainer id={blog.id} title={blog.title} body={blog.body} userId={blog.userId} />
         </>
