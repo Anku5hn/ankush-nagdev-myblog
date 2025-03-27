@@ -17,21 +17,19 @@ const BlogList: React.FC<BlogListProps> = ({ blogs }) => {
   const [currentPage, setCurrentPage] = useState<number>(1);
   const startIndex = (currentPage - 1) * 10;
   const endIndex = (startIndex) + 10;
-  const posts = blogs.slice(startIndex, endIndex);
+  const posts = blogs?.slice(startIndex, endIndex);
   const handlePage = (value: number) =>{
     setCurrentPage(value);
   }
   return (
     <>
 
-      { posts && <>
-      {posts.map((blog) => (
+{posts?.map((blog) => (
         <>
           <BlogContainer id={blog.id} title={blog.title} body={blog.body} userId={blog.userId} />
         </>
       ))}
-      </>
-      }
+
       {
         /*Page Desktop*/
       }
