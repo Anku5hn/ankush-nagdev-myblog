@@ -89,7 +89,7 @@ const BlogList: React.FC<BlogListProps> = ({ blogs }) => {
       ))}
       </>
     }
-      { currentStart > 10 && currentEnd > 10 && <>
+      { currentStart && currentEnd && <>
       {blogs.slice(currentStart, currentEnd).map((blog) => (
         <>
           <BlogContainer id={blog.id} title={blog.title} body={blog.body} userId={blog.userId} />
