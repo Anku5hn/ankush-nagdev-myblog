@@ -51,15 +51,13 @@ const BlogList: React.FC<BlogListProps> = ({ blogs }) => {
       {
         /*Page Mobile*/
       }
-      <div className="w-[80vw] flex justify-around mt-2 md:hidden lg:hidden">
-        <p>Page: </p>
+      <div className="w-[80vw] mx-[10vw] overflow-x-scroll flex justify-around mt-2 md:hidden lg:hidden">
+        <p className="mr-2 my-2">Page: </p>
         <Button variant={currentPage === 1 ? 'contained' : 'text'} onClick={() => { handlePage(1) }}>1</Button>
         <Button variant={currentPage === 2 ? 'contained' : 'text'} onClick={() => { handlePage(2) }}>2</Button>
         <Button variant={currentPage === 3 ? 'contained' : 'text'} onClick={() => { handlePage(3) }}>3</Button>
         <Button variant={currentPage === 4 ? 'contained' : 'text'} onClick={() => { handlePage(4) }}>4</Button>
         <Button variant={currentPage === 5 ? 'contained' : 'text'} onClick={() => { handlePage(5) }}>5</Button>
-      </div>
-      <div className="w-[80vw] flex justify-around mt-2 md:hidden lg:hidden">
         <Button variant={currentPage === 6 ? 'contained' : 'text'} onClick={() => { handlePage(6) }}>6</Button>
         <Button variant={currentPage === 7 ? 'contained' : 'text'} onClick={() => { handlePage(7) }}>7</Button>
         <Button variant={currentPage === 8 ? 'contained' : 'text'} onClick={() => { handlePage(8) }}>8</Button>
