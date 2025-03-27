@@ -19,11 +19,11 @@ interface Props {
 const Home: React.FC<Props> = ({ blogs }) => {
   return (
     <>
-    <Header />
-    <HomeCarousel />
-    <BlogList blogs={blogs}/>
-    <Footer />
-      </>
+      <Header />
+      <HomeCarousel />
+      <BlogList blogs={blogs} />
+      <Footer />
+    </>
   );
 };
 //GetServerSideProps for Page SSR https://nextjs.org/docs/pages/building-your-application/data-fetching/get-server-side-props

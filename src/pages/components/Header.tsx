@@ -43,7 +43,7 @@ const Header: React.FC = () => {
                 <div className="w-[100vw] h-[12vh] z-1 hidden md:flex lg:flex justify-center items-center fixed top-0 bg-white">
                     <div className="w-[90vw] flex justify-between">
                         <div className="flex gap-5 justify-center items-end">
-                           <Link href="/"> <h1 className="text-3xl text-[#1976D2] italic font-semibold">MyBlog.</h1></Link>
+                            <Link href="/"> <h1 className="text-3xl text-[#1976D2] italic font-semibold">MyBlog.</h1></Link>
                             <ul className="flex gap-5 cursor-pointer text-gray-500">
                                 <li className="hover:border-[#1976D2] border-b-3 border-white">Articles</li>
                                 <li className="hover:border-[#1976D2] border-b-3 border-white">Radio</li>

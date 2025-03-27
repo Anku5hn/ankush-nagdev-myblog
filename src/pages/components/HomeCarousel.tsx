@@ -24,20 +24,21 @@ const HomeCarousel: React.FC = () => {
                         <p className="text-blue-500 font-semibold">Affordability</p>
                     </div>
                 </div>
+                {/*Desktop*/}
                 <div className="w-[100vw] md:flex lg:flex justify-center items-center hidden bg-[#D1E8F7] mt-[1vh]">
                     <div className="w-[90vw] h-[50vh] flex justify-between">
                         <div className="flex h-full flex-col justify-around">
                             <div className="mt-10">
-                            <h2 className="text-4xl font-semibold">Find the best blogs!</h2>
-                            <p className="text-2xl font-semibold">Welcome to the best blogging website</p>
+                                <h2 className="text-4xl font-semibold">Find the best blogs!</h2>
+                                <p className="text-2xl font-semibold">Welcome to the best blogging website</p>
                             </div>
                             <div className="flex">
-                            <p className="text-lg font-semibold">Explore </p>
-                           <div className="border border-gray-400 mx-5"></div>
-                           <p className="text-blue-500 font-semibold mr-2 cursor-pointer">Intro</p>
-                        <p className="text-blue-500 font-semibold mr-2 cursor-pointer">Timing</p>
-                        <p className="text-blue-500 font-semibold mr-2 cursor-pointer">Pricing</p>
-                        <p className="text-blue-500 font-semibold mr-2 cursor-pointer">Affordability</p>
+                                <p className="text-lg font-semibold">Explore </p>
+                                <div className="border border-gray-400 mx-5"></div>
+                                <p className="text-blue-500 font-semibold mr-2 cursor-pointer">Intro</p>
+                                <p className="text-blue-500 font-semibold mr-2 cursor-pointer">Timing</p>
+                                <p className="text-blue-500 font-semibold mr-2 cursor-pointer">Pricing</p>
+                                <p className="text-blue-500 font-semibold mr-2 cursor-pointer">Affordability</p>
                             </div>
                         </div>
                         <div className="background-image w-[30vw] h-[50vh]">
