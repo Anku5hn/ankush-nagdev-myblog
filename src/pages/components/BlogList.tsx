@@ -21,7 +21,7 @@ const BlogList: React.FC<BlogListProps> = ({ blogs }) => {
   const handlePage = (value: number) => {
     switch (value) {
       case 1:
-        setCurrentPage(1);
+        setCurrentPage(0);
         setCurrentStart(1);
         setCurrentEnd(10);
         break;
@@ -80,7 +80,16 @@ const BlogList: React.FC<BlogListProps> = ({ blogs }) => {
   }
   return (
     <>
-      { currentStart && currentEnd && <>
+    {
+      currentEnd == 10 && <>
+      {blogs.slice(0, 10).map((blog) => (
+        <>
+          <BlogContainer id={blog.id} title={blog.title} body={blog.body} userId={blog.userId} />
+        </>
+      ))}
+      </>
+    }
+      { currentStart > 10 && currentEnd > 10 && <>
       {blogs.slice(currentStart, currentEnd).map((blog) => (
         <>
           <BlogContainer id={blog.id} title={blog.title} body={blog.body} userId={blog.userId} />
